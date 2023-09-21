@@ -1,0 +1,114 @@
+.background{
+    min-height: 100vh ;
+    min-width: 100vw ;
+    display: block;
+    background-image: url('../../../assets/images/Background_img.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.container{
+    border-radius: 2px;
+    border: 0.6px solid rgba(240, 240, 240, 0.20);
+    background: rgba(51, 51, 51, 0.30);
+    color: #fff;
+}
+
+.container-{
+    max-width: 554px;
+}
+
+.h4{
+    font-size: 28px;
+    font-weight: 600;
+
+}
+
+.input-block{
+    border-radius: 2px;
+    border: 0.6px solid rgba(240, 240, 240, 0.30);
+    background: #0F0F0F;
+
+    &:focus-within{
+
+        border: 0.6px solid rgba(215, 253, 44, 0.80);
+
+    }
+}
+
+
+
+i{
+    color: rgba(215, 253, 44, 1) ;
+    font-size: 16px;
+}
+
+input{
+    background-color: #0F0F0F;
+    border: 0px;
+    font-size: 14px;
+
+    &:focus{
+        outline: 0px;
+        background-color: #0F0F0F;
+    }
+}
+
+.helper-row{
+    margin-top: -5px;
+}
+
+#remember-me{
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+.helpers{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; 
+    letter-spacing: 0.14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.p a{
+    color: #D7FD2C;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+}
+
+.custom-input{
+    background: #DCF763;
+    border-radius: 30px;
+    border: none;
+    width: 150px;
+    height: 42px;
+    
+    &:hover{
+        background: #DCF763;
+        border: none;
+        
+    }
+    
+    &:focus{
+        border: none;
+        outline: none;
+    }
+
+    span{
+        color: #000;
+        font-size: 14px;
+    }
+
+
+}

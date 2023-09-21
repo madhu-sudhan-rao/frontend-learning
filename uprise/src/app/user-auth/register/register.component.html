@@ -1,0 +1,100 @@
+<div class="background d-flex justify-content-center align-items-center">
+    <div class="container p-4 w-100">
+        <div class="d-flex flex-column justify-content-center align-items-center gap-3">
+            <img src="../../../assets/images/LOGO.png" style="max-height: 90px; max-width: 90px;" alt="" class="img-responsive">
+            <img src="../../../assets/images/default-profile.png" style="max-height: 84px; max-width: 88px; border-radius: 50%;" alt="" class="img-responsive">
+        </div>
+        <div class="container-fluid mt-2 ">
+
+            <div class="row d-flex ">
+                <div class="col-12 col-md-6">
+                    <div class="label">
+                        Username
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-user ms-1"></i>
+                        <input type="text" name="" [(ngModel)]="registrationDetails.userName" placeholder="Enter your username" class="ms-2 w-75">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="label">
+                        Email
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-envelope ms-1"></i>
+                        <input type="email" name="" [(ngModel)]="registrationDetails.email" placeholder="Enter your email id" class="ms-2 w-75">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex ">
+                <div class="col-12 col-md-6">
+                    <div class="label">
+                        Mobile number
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-phone ms-1"></i>
+                        <input type="number" pattern="[0-9]{10}" placeholder="Enter your mobile number" name="" [(ngModel)]="registrationDetails.mobile" class="ms-2 w-75">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="label">
+                        Band name
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-users ms-1"></i>
+                        <input type="text" name="" placeholder="Enter your band name" [(ngModel)]="registrationDetails.title" class="ms-2 w-75">
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex ">
+                <div class="col-12 col-md-6">
+                    <div class="label">
+                        Location
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-map-marker ms-1"></i>
+                        <input type="text" name="" [(ngModel)]="registrationDetails.location" placeholder="Enter your location" class="ms-2 w-75">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="label">
+                        Password
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-lock ms-1"></i>
+                        <input type="password" name="" [(ngModel)]="registrationDetails.password" placeholder="Enter your password" class="ms-2 w-75">
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="label">
+                        Confirm Password
+                    </div>
+                    <div class="input-block p-1">
+                        <i class="fa fa-lock ms-1"></i>
+                        <input type="password" name="" placeholder="Enter your confirm password" [(ngModel)]="registrationDetails.password" class="ms-2 w-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 ">
+            <div class="col ms-3">
+                <input type="checkbox" [(ngModel)]="termsAndConditions" >
+                <span class="terms-cond">
+                    By creating an account, you agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy.</a>
+                </span>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-2">
+            <button class="register-btn" (click) = "onSubmit()">
+                REGISTER
+            </button>
+            <div class="text-center mt-1">
+                Already have an account? <a [routerLink]="['/login']">Login</a>
+            </div>
+        </div>
+        
+    </div>
+
+</div>vscode-file://vscode-app/snap/code/137/usr/share/code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html

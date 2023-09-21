@@ -1,0 +1,15 @@
+div{
+
+    height: 100vh;
+    width: 100vw;
+    background-image: "../../assets/images/Background_img.png";
+}
+
+:host {
+    display: block;
+    background-image: url('../../assets/images/Background_img.png'); /* Adjust the path as necessary */
+    background-size: cover; /* Adjust the size as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  

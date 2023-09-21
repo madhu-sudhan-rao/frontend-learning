@@ -1,0 +1,35 @@
+<div class="container-fluid p-3 ps-4 ">
+    <div class="row d-flex align-items-center">
+        <div class="col d-flex align-items-end justify-content-start ">
+            <img src="../../../assets/images/LOGO.png" alt="" class="img-responsive logo">
+            <div class="ms-1">
+                <span class="fs-5 fw-bold" >UPRISE</span>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-end pe-3">
+            <img src="../../../assets/images/default-profile.png" alt="" class="img-responsive profile-pic">
+            <button class="profile-btn ms-3 fs-5" (click)="toggleDropdown()">
+                {{user.userName}} <span><i class="fa fa-caret-down ms-1"></i></span>
+            </button>
+        </div>
+        <div *ngIf="dropdownStatus" class="dropdown p-2 " id="dropdown">
+            <div class="row d-flex flex-column">
+                <div class="col ">
+                    <button class="options p-1 w-100 text-start mb-1">
+                        <i class="fa fa-user ms-1"></i><span class="option ms-2">My Profile</span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="options p-1 w-100 text-start mb-1">
+                        <i class="fa fa-unlock ms-1"></i><span class="option ms-2">Change Password</span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="options p-1 w-100 text-start mb-1" (click)="logout()">
+                        <i class="fa fa-user ms-1"></i><span class="option ms-2">Logout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

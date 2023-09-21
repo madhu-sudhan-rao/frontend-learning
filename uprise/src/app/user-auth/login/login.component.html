@@ -1,0 +1,54 @@
+<div class=" background d-flex justify-content-center align-items-center">
+    <div class="container- d-flex w-50" >
+        <div class="container  p-4">
+            <div class=" d-flex flex-column justify-content-center align-items-center  m-2 ">
+                <img src="../../../assets/images/LOGO.png" style="max-height: 80px; max-width: 80px;" alt="" class="img-responsive">
+                <div class="h4 mt-2">UPRISE</div>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">            
+                    <div class="row p-3">
+                        <div class="col-sm-8 w-100 p-2">
+                            <div class="label ">
+                                <label for="email">Email ID</label>
+                            </div>
+                            <div class="input-block p-2">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input type="email" name="email" [(ngModel)]="loginDetails.email" [ngModelOptions]="{standalone: true}" id="email" class="w-75 ms-2" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        
+                      
+                        <div class="col-sm-8 w-100 p-2">
+                            <div class="label">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="input-block p-2">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                <input type="password" required name="password" [(ngModel)]="loginDetails.password" id="password" [ngModelOptions]="{standalone: true}" class="w-75 ms-2" placeholder="Enter your password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row helper-row  pe-3">
+                            <div class="col-6 form-check ">
+                                <input type="checkbox" id="remember-me" [(ngModel)]="rememberMe" name="checkbox" [ngModelOptions]="{standalone:true}" class="">
+                                <label for="remember-me" class="helpers ms-1">Remember Me</label>
+                            </div>
+                            <div class="col-6 text-end ">
+                                <a href="#" class="helpers">Forgot Password?</a>
+                            </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-2">
+                        <button pButton  class="custom-input" type="submit"><span class="p-button-label">LOGIN</span></button>
+                    </div>
+                </form>
+                <div class="row d-flex text-center mt-3">
+                    <div class="p">
+                        Don't have an accout? <a [routerLink]="['/register']">Signup as an artist</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

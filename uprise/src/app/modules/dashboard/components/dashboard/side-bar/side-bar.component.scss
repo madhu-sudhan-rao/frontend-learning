@@ -1,0 +1,44 @@
+.nav-container{
+    height: 100vh;
+}
+
+
+.nav-buttons{
+    background-color: #000;
+    border: none;
+    text-decoration: none;
+
+    &:hover{
+        span i{
+            color: #D7FD2C ;
+        }
+        div{
+            color: #D7FD2C ;
+        }
+    }
+
+    div{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px; /* 157.143% */
+        letter-spacing: 0.44px;
+    }
+
+    &:active{
+        span i{
+            color: #D7FD2C ;
+        }
+        div{
+            color: #D7FD2C ;
+        }
+    }
+}
+
+.active{
+    span i{
+        color: #D7FD2C ;
+    }
+    div{
+        color: #D7FD2C ;
+    }
+}

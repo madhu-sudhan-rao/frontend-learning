@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boot</title>
+    <link rel="stylesheet" href="./bootstrap-site.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-0">
+    <nav
+      class="navbar navbar-expand-md p-0 sticky-top bg-body-tertiary"
+      id="myScrollspy"
+    >
+      <div class="container-md">
+        <a href="#" class="navbar-brand text-white"> Logo </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-label="Expand Navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div
+          class="collapse navbar-collapse scrollspy-example bg-body-tertiary"
+          id="nav"
+        >
+          <ul class="nav navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                href="#about"
+                class="nav-link"
+                aria-current="page"
+                onclick="changeActiveLink(this)"
+                >ABOUT</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#services"
+                class="nav-link"
+                onclick="changeActiveLink(this)"
+                >SERVICES</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#portfolio"
+                class="nav-link"
+                onclick="changeActiveLink(this)"
+                >PORTFOLIO</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#pricing"
+                class="nav-link"
+                onclick="changeActiveLink(this)"
+                >PRICING</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="#contact"
+                class="nav-link"
+                onclick="changeActiveLink(this)"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid subscribe-container text-center">
+      <h1>Company</h1>
+      <p>We specialize in blablabla</p>
+      <form action="" class="form-inline">
+        <div class="input-group" style="padding-left: 30%; padding-right: 30%">
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Email Address"
+            class="form-control form-control-sm custom-input"
+          />
+          <div class="input-group-btn">
+            <button class="btn btn-danger">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="main-container"
+          data-bs-spy="scroll"
+          data-bs-target="#myScrollspy"
+          data-bs-smooth-scroll="true"
+    >
+      <div
+        class="container-fluid custom-container"
+        id="about"
+        
+      >
+        <div class="row p-5">
+          <div class="col-md-8">
+            <h2 class="pb-5 fw-bold fs-5">ABOUT COMPANY PAGE</h2>
+            <div class="h5 mt-2 mb-5 w-100">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+            <p class="text-secondary fs-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <button
+              class="col-md-5 col-lg-4 col-xl-3 col-sm-12 col-12 btn btn-outline-secondary btn-lg"
+            >
+              Get in Touch
+            </button>
+          </div>
+          <div class="col-md-4 m-0 text-center">
+            <i class="bi bi-bar-chart-fill logo"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-grey">
+        <div class="row p-5">
+          <div class="col-md-4 text-center p-1">
+            <i class="bi bi-globe-central-south-asia logo"></i>
+          </div>
+          <div class="col-md-8 p-3">
+            <div class="h2 mb-5 fs-4">OUR VALUES</div>
+            <div class="p mb-5">
+              <strong class="h3 fs-5">MISSION:</strong> Our mission lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </div>
+            <div class="p text-secondary">
+              <strong class="fw-b">VISION:</strong> Our vision Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid text-center p-5 pb-1" id="services">
+        <h2 class="fs-3 mb-4">SERVICES</h2>
+        <h4 class="fw-light fs-5">What we offer</h4>
+        <br />
+        <div class="row p-5 slideanim">
+          <div class="col-md-4">
+            <span class="p-5"
+              ><i class="bi bi-power logo-small fw-bold"></i
+            ></span>
+            <h1 class="display-5 fs-5 fw-normal">POWER</h1>
+            <p class="text-secondary">Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-md-4">
+            <span><i class="bi bi-heart-fill logo-small"></i></span>
+            <h1 class="display-5 fs-5 fw-normal">LOVE</h1>
+            <p class="text-secondary">Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-md-4">
+            <span><i class="bi bi-lock-fill logo-small"></i></span>
+            <h1 class="display-5 fs-5 fw-normal">JOB DONE</h1>
+            <p class="text-secondary">Lorem ipsum dolor sit amet..</p>
+          </div>
+        </div>
+        <div class="row p-5">
+          <div class="col-md-4">
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <span
+              ><i class="fa fa-leaf logo-small" style="font-size: 50px"></i
+            ></span>
+            <h1 class="display-5 fs-5 fw-normal">GREEN</h1>
+            <p class="text-secondary">Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-md-4">
+            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <span
+              ><i
+                class="fa fa-certificate logo-small"
+                style="font-size: 50px"
+              ></i
+            ></span>
+            <h1 class="display-5 fs-5 fw-normal">CERTIFIED</h1>
+            <p class="text-secondary">Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-md-4">
+            <span class="glyphicon glyphicon-wrench logo-small"></span>
+            <span
+              ><i class="fa fa-wrench logo-small" style="font-size: 50px"></i
+            ></span>
+            <h1 class="display-5 fs-5 fw-normal">HARD WORK</h1>
+            <p class="text-secondary">Lorem ipsum dolor sit amet..</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="portfolio" class="container-fluid text-center bg-grey p-5">
+        <h2 class="fs-3 mb-5">PORTFOLIO</h2>
+        <h4 class="fw-light fs-5 mb-5">What we have created</h4>
+        <div class="row text-center slideanim">
+          <div class="col-sm-4">
+            <div class="thumbnail bg-white">
+              <img
+                src="https://www.w3schools.com/bootstrap/paris.jpg"
+                alt="Paris"
+                width="400"
+                height="300"
+              />
+              <p class="text-secondary fs-6 display-6 fw-bold">Paris</p>
+              <p class="text-secondary">Yes, we built Paris</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail bg-white">
+              <img
+                src="https://www.w3schools.com/bootstrap/newyork.jpg"
+                alt="New York"
+                width="400"
+                height="300"
+              />
+              <p class="text-secondary fs-6 display-6 fw-bold">New York</p>
+              <p class="text-secondary">We built New York</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail bg-white">
+              <img
+                src="https://www.w3schools.com/bootstrap/sanfran.jpg"
+                alt="San Francisco"
+                width="400"
+                height="300"
+              />
+              <p class="text-secondary fs-6 display-6 fw-bold">San Francisco</p>
+              <p class="text-secondary">Yes, San Fran is ours</p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <h2 class="mt-5 fs-4">What our customers say</h2>
+
+        <div
+          id="carousel"
+          class="carousel slide text-center"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active item">
+              <h4 class="d-block w-100">
+                "This company is the best. I am so happy with the result!"<br /><span
+                  >Michael Roe, Vice President, Comment Box</span
+                >
+              </h4>
+            </div>
+            <div class="carousel-item item">
+              <h4 class="d-block w-100">
+                "One word... WOW!!"<br /><span
+                  >John Doe, Salesman, Rep Inc</span
+                >
+              </h4>
+            </div>
+            <div class="carousel-item item">
+              <h4 class="d-block w-100">
+                "Could I... BE any more happy with this company?"<br /><span
+                  >Chandler Bing, Actor, FriendsAlot</span
+                >
+              </h4>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"
+              ><i class="fa fa-chevron-left" aria-hidden="true"></i
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"
+              ><i class="fa fa-chevron-right" aria-hidden="true"></i
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Container (Pricing Section) -->
+      <div id="pricing" class="container-fluid p-5">
+        <div class="text-center">
+          <h2 class="fs-3 mb-4">PRICING</h2>
+          <h4 class="fw-light fs-5 mb-5">
+            Choose a payment plan that works for you
+          </h4>
+        </div>
+        <div class="row slideanim gy-5">
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading p-4 pt-5 pb-">
+                <h1>Basic</h1>
+              </div>
+              <div class="panel-body p-3 border">
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">20</span>
+                  Lorem
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">15</span>
+                  Ipsum
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">5</span>
+                  Dolor
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">2</span>
+                  Sit
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold"
+                    >Endless</span
+                  >
+                  Amet
+                </p>
+              </div>
+              <div class="panel-footer mt-4">
+                <h3 class="text-secondary fw-normal fs-1">$19</h3>
+                <h4 class="fw-light">per month</h4>
+                <button class="btn btn-lg mb-4">Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading p-4 pt-5 pb-">
+                <h1>Pro</h1>
+              </div>
+              <div class="panel-body p-3 border">
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">50</span>
+                  Lorem
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">25</span>
+                  Ipsum
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">10</span>
+                  Dolor
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">5</span>
+                  Sit
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold"
+                    >Endless</span
+                  >
+                  Amet
+                </p>
+              </div>
+              <div class="panel-footer mt-4">
+                <h3 class="text-secondary fw-normal fs-1">$29</h3>
+                <h4 class="fw-light">per month</h4>
+                <button class="btn btn-lg mb-4">Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+              <div class="panel-heading p-4 pt-5">
+                <h1>Premium</h1>
+              </div>
+              <div class="panel-body p-3 border">
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">100</span>
+                  Lorem
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">50</span>
+                  Ipsum
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">25</span>
+                  Dolor
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold">10</span>
+                  Sit
+                </p>
+                <p class="text-secondary">
+                  <span class="text-secondary fs-6 display-6 fw-bold"
+                    >Endless</span
+                  >
+                  Amet
+                </p>
+              </div>
+              <div class="panel-footer mt-4"">
+              <h3 class="text-secondary fw-normal fs-1">$49</h3>
+              <h4 class="fw-light">per month</h4>
+              <button class="btn btn-lg mb-4">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <!-- Container (Contact Section) -->
+      <div id="contact" class="container-fluid bg-grey text-secondary p-5">
+        <h2 class="text-center fs-3">CONTACT</h2>
+        <div class="row mt-4">
+          <div class="col-sm-5">
+            <p>Contact us and we'll get back to you within 24 hours.</p>
+            <p><i class="bi bi-geo-alt-fill text-secondary"></i> Chicago, US</p>
+            <p><i class="bi bi-phone text-secondary"></i> +00 1515151515</p>
+            <p>
+              <i class="bi bi-envelope-fill text-secondary"></i>
+              myemail@something.com
+            </p>
+          </div>
+          <div class="col-sm-7 slideanim">
+            <div class="row mb-1">
+              <div class="col-sm-6 form-group mb-2">
+                <input
+                  class="form-control text-secondary"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="col-sm-6 form-group mb-2">
+                <input
+                  class="form-control text-secondary"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  type="email"
+                  required
+                />
+              </div>
+            </div>
+            <textarea
+              class="form-control text-secondary"
+              id="comments"
+              name="comments"
+              placeholder="Comment"
+              rows="5"
+            ></textarea
+            ><br />
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button
+                  class="btn btn-outline-secondary pull-right"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image of map -->
+      <img
+        src="https://www.w3schools.com/w3images/map.jpg"
+        class="w3-image w3-greyscale-min"
+        style="width: 100%"
+      />
+
+      <footer class="container-fluid text-center p-5">
+        <a href="#" title="To Top">
+          <i class="bi bi-chevron-up"></i>
+        </a>
+        <p class="text-secondary fw-normal fs-6 display-6 mt-4">
+          Bootstrap Theme Made By
+          <a href="https://www.w3schools.com" title="Visit w3schools"
+            >www.w3schools.com</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      function changeActiveLink(clickedLink) {
+        var links = document.querySelectorAll(".nav-item .nav-link");
+        links.forEach(function (link) {
+          link.classList.remove("active");
+        });
+
+        clickedLink.classList.add("active");
+      }
+    </script>
+  </body>
+</html>

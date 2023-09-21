@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs Management</title>
+    <link rel="stylesheet" href="./songs-management-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="./images/uprise.png" alt="Logo" class="image">
+                </div>
+                <div class="brand-name">
+                    uprise
+                </div>
+            </div>
+
+            <div class="side-section">
+
+                <div class="selection-section">
+                    <div class="select-band-image">
+                        <img src="./images/select-band.png" alt="" class="image" id="band-image">
+                    </div>
+                    <div class="default-band-name" >
+                        <span id="selectedBand">Select band</span>
+                    </div>
+                    <div class="dropdown">
+                        <button class="down-btn" onclick="toggleDropdown()">
+                            <span class="material-symbols-outlined" id="dropdown-btn">
+                                expand_more
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="dropdown-menu" id="dropdown-container">
+                    <div class="band">
+                        <button class="band-button" onclick="selectBand(0,'./images/pexels-antoni-shkraba-production-8041015 1.png')">
+                            <div class="band-image">
+                                <img src="./images/pexels-antoni-shkraba-production-8041015 1.png" alt="" srcset="" class="image">
+                            </div>
+                            <div class="band-name">
+                                One Direction
+                            </div>
+                        </button>
+                    </div>
+                    <div class="band">
+                        <button class="band-button" onclick="selectBand(1,'./images/avatar-01.png')">
+                            <div class="band-image">
+                                <img src="./images/avatar-01.png" alt="" srcset="" class="image">
+                            </div>
+                            <div class="band-name">
+                                Imagine Dragons
+                            </div>
+                        </button>
+                    </div>
+                    <div class="band">
+                        <button class="band-button" onclick="selectBand(2,'./images/uprise.png')">
+                            <div class="band-image">
+                                <img src="./images/uprise.png" alt="" srcset="" class="image">
+                            </div>
+                            <div class="band-name">
+                                Deep Purple
+                            </div>
+                        </button>
+                    </div>
+                    <div class="band">
+                        <button class="band-button" onclick="selectBand(3,'./images/avatar-02.png')">
+                            <div class="band-image">
+                                <img src="./images/avatar-02.png" alt="" srcset="" class="image">
+                            </div>
+                            <div class="band-name">
+                                Cold Play
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="./images/avatar-02.png" alt="Profile" class="image" >
+                    </div>
+                    <div class="profile-name">
+                        lucy martin
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="side-bar">
+                <div class="nav">
+                    <button class="nav-button">
+                        <div class="nav-icon">
+                            <span class="material-symbols-outlined">
+                                music_note
+                            </span>
+                        </div>
+                        <div class="nav-name">
+                            Songs Management
+                        </div>
+                    </button>
+                </div>
+                <div class="nav">
+                    <button class="nav-button">
+                        <div class="nav-icon">
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                        </div>
+                        <div class="nav-name">
+                            Event Management
+                        </div>
+                    </button>
+                </div>
+                <div class="nav">
+                    <button class="nav-button">
+                        <div class="nav-icon">
+                            <span class="material-symbols-outlined" style="
+                                font-variation-settings: 'FILL' 1;">
+                                groups
+                            </span>
+                        </div>
+                        <div class="nav-name">
+                            Band Details
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="view-section">
+                <div class="view-nav-bar">
+                    <div class="nav-buttons">
+                        <div class="nav-btn">
+                            <button>
+                                All Songs
+                            </button>
+                        </div>
+                        <div class="nav-btn">
+                            <button>
+                                Albums
+                            </button>
+                        </div>
+                    </div>
+                    <div class="utility-buttons">
+                        <div class="search-box">
+                            <button>
+                                <span class="material-symbols-outlined">
+                                    search
+                                </span>
+                            </button>
+                            <input type="text" name="" id="" placeholder="Search song...">
+                        </div>
+                        <div class="upload-box">
+                            <button class="upload-btn">
+                                <span class="material-symbols-outlined">
+                                    cloud_upload
+                                </span> <span id="upload">
+                                    Upload new song
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-songs-table">
+                    <div class="song-row song-header">
+                        <div class="song-detail">
+                            <input type="checkbox" name="" id="check" class="checkbox">
+                        </div>
+                        <div class="song-detail">
+                            Thumbnail
+                        </div>
+                        <div class="song-detail">
+                            Title
+                        </div>
+                        <div class="song-detail">
+                            Duration
+                        </div>
+                        <div class="song-detail">
+                            Album Name
+                        </div>
+                        <div class="song-detail">
+                            Genre
+                        </div>
+                        <div class="song-detail">
+                            City Name
+                        </div>
+                        <div class="song-detail">
+                            State
+                        </div>
+                        <div class="song-detail">
+                            Uploaded On
+                        </div>
+                        <div class="song-detail">
+                            Live
+                        </div>
+                        <div class="song-detail">
+                            Actions
+                        </div>
+                    </div>
+                    <div class="song-row">
+                        <div class="song-detail">
+                            <input type="checkbox" name="" id="check" class="checkbox">
+                        </div>
+                        <div class="song-detail">
+                            <img src="./images/pexels-antoni-shkraba-production-8041015 1.png" alt="" srcset="">
+                        </div>
+                        <div class="song-detail">
+                            Money
+                        </div>
+                        <div class="song-detail">
+                            02:30
+                        </div>
+                        <div class="song-detail">
+                            Bad Boys
+                        </div>
+                        <div class="song-detail">
+                            Jazz, Rock
+                        </div>
+                        <div class="song-detail">
+                            Maple Shade
+                        </div>
+                        <div class="song-detail">
+                            New Jersey
+                        </div>
+                        <div class="song-detail">
+                            Jan 10, 2022
+                        </div>
+                        <div class="song-detail">
+                            <button onclick="toggleSwitch(this)">
+                                <span class="material-symbols-outlined" id="toggle">
+                                    toggle_off
+                                </span>
+                            </button>
+                        </div>
+                        <div class="song-detail">
+                            <button>
+                                <span class="material-symbols-outlined edit">
+                                    edit
+                                </span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined delete">
+                                    delete
+                                </span>
+                            </button>
+                        </div>
+                    </div> 
+                    <div class="song-row">
+                        <div class="song-detail">
+                            <input type="checkbox" name="" id="check" class="checkbox">
+                        </div>
+                        <div class="song-detail">
+                            <img src="./images/pexels-antoni-shkraba-production-8041015 1.png" alt="" srcset="">
+                        </div>
+                        <div class="song-detail">
+                            Money
+                        </div>
+                        <div class="song-detail">
+                            02:30
+                        </div>
+                        <div class="song-detail">
+                            Bad Boys
+                        </div>
+                        <div class="song-detail">
+                            Jazz, Rock
+                        </div>
+                        <div class="song-detail">
+                            Maple Shade
+                        </div>
+                        <div class="song-detail">
+                            New Jersey
+                        </div>
+                        <div class="song-detail">
+                            Jan 10, 2022
+                        </div>
+                        <div class="song-detail">
+                            <button onclick="toggleSwitch(this)">
+                                <span class="material-symbols-outlined" id="toggle">
+                                    toggle_off
+                                </span>
+                            </button>
+                        </div>
+                        <div class="song-detail">
+                            <button>
+                                <span class="material-symbols-outlined edit">
+                                    edit
+                                </span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined delete">
+                                    delete
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="song-row">
+                        <div class="song-detail">
+                            <input type="checkbox" name="" id="check" class="checkbox">
+                        </div>
+                        <div class="song-detail">
+                            <img src="./images/pexels-antoni-shkraba-production-8041015 1.png" alt="" srcset="">
+                        </div>
+                        <div class="song-detail">
+                            Money
+                        </div>
+                        <div class="song-detail">
+                            02:30
+                        </div>
+                        <div class="song-detail">
+                            Bad Boys
+                        </div>
+                        <div class="song-detail">
+                            Jazz, Rock
+                        </div>
+                        <div class="song-detail">
+                            Maple Shade
+                        </div>
+                        <div class="song-detail">
+                            New Jersey
+                        </div>
+                        <div class="song-detail">
+                            Jan 10, 2022
+                        </div>
+                        <div class="song-detail">
+                            <button onclick="toggleSwitch(this)">
+                                <span class="material-symbols-outlined" id="toggle">
+                                    toggle_off
+                                </span>
+                            </button>
+                        </div>
+                        <div class="song-detail">
+                            <button>
+                                <span class="material-symbols-outlined edit">
+                                    edit
+                                </span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined delete">
+                                    delete
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="song-row">
+                        <div class="song-detail">
+                            <input type="checkbox" name="" id="check" class="checkbox">
+                        </div>
+                        <div class="song-detail">
+                            <img src="./images/pexels-antoni-shkraba-production-8041015 1.png" alt="" srcset="">
+                        </div>
+                        <div class="song-detail">
+                            Money
+                        </div>
+                        <div class="song-detail">
+                            02:30
+                        </div>
+                        <div class="song-detail">
+                            Bad Boys
+                        </div>
+                        <div class="song-detail">
+                            Jazz, Rock
+                        </div>
+                        <div class="song-detail">
+                            Maple Shade
+                        </div>
+                        <div class="song-detail">
+                            New Jersey
+                        </div>
+                        <div class="song-detail">
+                            Jan 10, 2022
+                        </div>
+                        <div class="song-detail">
+                            <button onclick="toggleSwitch(this)">
+
+                                <span class="material-symbols-outlined" id="toggle">
+                                    toggle_off
+                                </span>
+                            </button>
+                        </div>
+                        <div class="song-detail">
+                            <button>
+                                <span class="material-symbols-outlined edit">
+                                    edit
+                                </span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined delete">
+                                    delete
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="song-row">
+                        <div class="song-detail">
+                            <input type="checkbox" name="" id="check" class="checkbox">
+                        </div>
+                        <div class="song-detail">
+                            <img src="./images/pexels-antoni-shkraba-production-8041015 1.png" alt="" srcset="">
+                        </div>
+                        <div class="song-detail">
+                            Money
+                        </div>
+                        <div class="song-detail">
+                            02:30
+                        </div>
+                        <div class="song-detail">
+                            Bad Boys
+                        </div>
+                        <div class="song-detail">
+                            Jazz, Rock
+                        </div>
+                        <div class="song-detail">
+                            Maple Shade
+                        </div>
+                        <div class="song-detail">
+                            New Jersey
+                        </div>
+                        <div class="song-detail">
+                            Jan 10, 2022
+                        </div>
+                        <div class="song-detail">
+                            <button onclick="toggleSwitch(this)">
+                                <span class="material-symbols-outlined" id="toggle">
+                                    toggle_off
+                                </span>
+                            </button>
+                        </div>
+                        <div class="song-detail">
+                            <button>
+                                <span class="material-symbols-outlined edit">
+                                    edit
+                                </span>
+                            </button>
+                            <button>
+                                <span class="material-symbols-outlined delete">
+                                    delete
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="./songs-management-script.js"></script>
+</body>
+</html>

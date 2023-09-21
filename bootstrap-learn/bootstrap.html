@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body class="p-3">
+    
+    <div class="container border p-2">
+        <div class="h1">
+            Task 1: Basic Grid Layout
+        </div>
+        <div class="rows">
+            <div class="col bg-primary">
+                Row 1, Col1
+            </div>
+            <div class="col bg-secondary">
+                Row 1, Col 2
+            </div>
+            <div class="col bg-success">
+                Row 1, Col 3
+            </div>
+        </div>
+        <div class="rows">
+            <div class="col bg-info">
+                Row 2, Col 1
+            </div>
+            <div class="col bg-warning">
+                Row 2, Col 2
+            </div>
+            <div class="col bg-danger">
+                Row 2, Col 3
+            </div>
+        </div>
+        <div class="rows">
+            <div class="col bg-dark text-white">
+               Row 3, Col 1
+            </div>
+            <div class="col bg-light">
+                Row 3, Col 2
+            </div>
+            <div class="col bg-secondary">
+                Row 3, Col 3
+            </div>
+        </div>
+    </div>
+
+    <div class="container border  p-2">
+        <div class="h1">
+            Task 2: Responsive Columns
+        </div>
+        <div class="rows ">
+            <div class="col-lg-6 col-md-12 bg-danger">
+                Large Screen Col 1
+            </div>
+            <div class="col-lg-6 col-md-12 bg-info">
+                Large Screen Col 2
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2 border">
+        <div class="h1">
+            Task 3: Offset Columns
+        </div>
+        <div class="rows">
+            <div class="col bg-primary">
+                Column 1
+            </div>
+            <div class="col offset-md-1 bg-secondary">
+                Column 2 (Offset by 1)
+            </div>
+            <div class="col offset-md-1 bg-success">
+                Column 3 (Offset by 1)
+            </div>
+            <div class="col bg-info">
+                Column 4
+            </div>
+            .
+        </div>
+    </div>
+    
+</body>
+</html>

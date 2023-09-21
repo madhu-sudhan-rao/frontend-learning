@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Oswald', sans-serif;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+.page-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000 ;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+}
+
+/* HEADER STYLE STARTS */
+
+.header{
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #F0F0F033;
+    grid-template-columns: 60% 20% 20%;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    padding: 16px 16px 16px 16px;
+}
+
+.brand{
+    display: grid;
+    grid-template-columns: 35px 1fr;
+}
+
+.brand .brand-name{
+    text-transform: uppercase;
+    vertical-align: middle;
+    position: relative;
+    top: 3px;
+    font-weight: 700px;
+    font-size: 18px;
+    line-height: 26.68px;
+}
+
+.side-section{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.selection-section{
+    width: 150px;
+    height: 20px;
+    background-color: #282828;
+    padding:  8px 8px 5px 8px  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #282828;
+    border-radius: 25px;
+    
+}
+
+.selection-section .default-band-name{
+    width: 80%;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #969696;
+    position: relative;
+    top: -2.5px;
+    text-align: left;
+}
+
+.selection-section .dropdown .down-btn{
+    background: none;
+    color: #D4D4D4;
+    border: 1px solid white;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+}
+
+.profile{
+    width: 135px;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    position: relative;
+    top: 5px;
+}
+
+.profile-photo .image{
+    height: 25px;
+    width: 25px;
+}
+
+.profile .profile-name{
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500px;
+    position: relative;
+    top: 2px;
+}
+
+/* DROPDOWN STARTS */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+}
+
+.band button{
+    display: flex;
+    width: 165px;
+    padding:  8px 8px 5px 8px  ;
+    gap: 8px;
+    background-color: #282828;
+    color: #969696;
+    border: .6px solid #F0F0F033;
+    border-top: 0px;
+    /* border-radius: 30px; */
+
+}
+
+.dropdown-menu .band:first-child button{
+    border-top: .6px solid #F0F0F033;
+}
+
+.band button:hover{
+
+    background-color: #333333;
+
+}
+
+.band-image .image, #band-image{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+/* DROPDOWN ENDS */
+
+/* HEADER STYLE ENDS */
+
+/* MAIN STYLE STARTS */
+
+.main{
+    display: grid;
+    grid-template-columns: 208px 1fr ;
+}
+
+/* SIDE-BAR STYLE STARTS */
+
+.side-bar{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid #F0F0F033 ;
+    width: 208px;
+    
+}
+
+.side-bar .nav button {
+    width: 208px;
+    padding: 10px;
+    background: none;
+    display: flex;
+    color: white;
+    gap: 10px;
+    border: none;
+}
+
+.side-bar .nav button:focus{
+    color: #D7FD2C;
+}
+
+.side-bar .nav button .nav-name{
+    font-weight: 500px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1%;
+
+}
+
+/* SIDE-BAR STYLE ENDS */
+
+/* VIEW SECTION STYLE STARTS */
+
+.view-section{
+    background-color: #181818;
+    display: grid;
+    grid-template-rows: 100px 1fr ;
+    padding-left: 20px;
+}
+
+.view-nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.view-section .view-nav-bar .nav-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem ;
+}
+
+.view-section .view-nav-bar .nav-buttons .nav-btn button{
+    color: white;
+    width: 68px;
+    font-size: 16px;
+    line-height: 23.71px;
+    background: none;
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #181818;
+    border-radius: 0px;
+
+
+}
+
+.view-section .view-nav-bar .nav-buttons .nav-btn button:focus{
+    color: #906dd5;
+    width: 68px;
+    font-size: 16px;
+    line-height: 23.71px;
+    background: none;
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #906dd5;
+    border-radius: 0px;
+
+}
+
+.utility-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-right: 1rem;
+}
+
+.utility-buttons .search-box {
+    border: 1px solid #969696;
+    border-radius: 30px;
+    /* padding: 5px 8px 5px 8px ; */
+    width: 226px;
+    height: 28px;
+    padding: 4px 5px 8px 8px ;
+}
+
+.utility-buttons .search-box button {
+    color: #969696;
+    background-color: #18181800;
+    border: none;
+    position: relative;
+    top: 5px;
+}
+
+.utility-buttons .search-box input{
+    height: 29px;
+    width: 150px;
+    background-color: #181818;
+    border: none;
+    position: relative;
+    top: -1px;
+    padding-left: 3px;
+    font-size: 12px;
+    line-height: 17.78px;
+    color: #969696;
+}
+
+.utility-buttons .search-box input:focus{
+    outline: none;
+}
+
+
+.utility-buttons .upload-box .upload-btn{
+    background-color: #906DD5;
+    border: 1px solid #906DD5;
+    width: 163px;
+    height: 40px;
+    padding: 8px,16px,8px, 16px;
+    color: white;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+
+
+
+.utility-buttons .upload-box .upload-btn .material-symbols-outlined{
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+.utility-buttons .upload-box .upload-btn #upload{
+    position: relative;
+    top: -2px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500px;
+}
+
+/* SONGS TABLE */
+
+.all-songs-table{
+    height: 414px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    color: white;
+    border: 1px solid #F0F0F033;
+    /* margin-left: 5px; */
+}
+
+
+.song-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: #202020;
+    border-bottom: .2px solid #f0f0f038;
+    padding: 10px;
+    position: relative;
+}
+
+.song-header{
+    height: 56px;
+    background-color: #333333;
+    border-bottom: 1px solid #F0F0F033;
+}
+
+.song-header .song-detail:nth-child(3){
+    position: relative;
+    left: -28px;
+}
+
+.song-header .song-detail:nth-child(4){
+    position: relative;
+    left: -42px;
+}
+
+.song-header .song-detail:nth-child(5){
+    position: relative;
+    left: -62px;
+}
+
+.song-header .song-detail:nth-child(6){
+    position: relative;
+    left: -70px;
+}
+
+.song-header .song-detail:nth-child(7){
+    position: relative;
+    left: -55px;
+}
+
+.song-header .song-detail:nth-child(8){
+    position: relative;
+    left: -33px;
+}
+
+.song-header .song-detail:nth-child(9){
+    position: relative;
+    left: -10px;
+}
+
+.song-header .song-detail:nth-child(10){
+    position: relative;
+    left: -15px;
+}
+
+.song-header .song-detail:nth-child(11){
+    position: relative;
+    left: -15px;
+}
+
+.song-row button{
+    background-color: #202020;
+    border: none;
+    color: white;
+    margin-right: 5px;
+}
+
+.song-row button .edit{
+    text-decoration: underline;
+    font-size: 20px;
+    font-variation-settings: 'FILL' 1;
+}
+
+.song-row button .delete{
+    color: #FD797B;
+    position: relative;
+    top: 4px;
+}
+
+input{
+    accent-color: #202020;
+}
+
+.song-detail:nth-child(1){
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+}
+
+.checkbox{
+    height: 16px;
+    width: 16px;
+    border: 2px solid #969696;
+}
+
+.song-detail:nth-child(1) input[type=checkbox] {
+    appearance: none;
+    position: relative;
+}
+
+.song-row:nth-child(n+2) .song-detail:first-child input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+
+.song-detail:nth-child(1) input[type=checkbox]::before {
+    position: absolute;
+    content: '\2713';
+    font-size: 15px;
+    line-height: 15px;
+    color: #fff;
+    transform: scale(0);
+    transition: 0.2s all ease-in-out;
+    top: -2.8px;
+}
+
+.song-detail:nth-child(1) input[type=checkbox]:checked::before {
+    transform: scale(1);
+}
+
+
+/* SONGS TABLE ENDS */
+
+/* VIEW SECTION STYLE STARTS */
+
+
+/* MAIN STYLE ENDS */

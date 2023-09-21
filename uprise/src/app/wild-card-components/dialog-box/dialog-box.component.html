@@ -1,0 +1,22 @@
+<div class="card">
+
+    <div class="card-header text-center text-white">
+        <span><i class="fa fa-exclamation-circle fs-1"></i></span>
+    </div>
+    <div class="card-body text-center text-white">
+        <div class="fs-4">
+            {{ message }}
+        </div>
+        <div class="row d-flex flex-row justify-content-around  mt-4">
+            <div class="button-box col-6 gap-5">
+                <button  class="text-dark  " class="custom-button" (click)="closeDialog(true)"><span class="p-button-label">Yes, delete</span></button>
+            </div>
+            <div class="col-6 no-btn">
+                
+                <button pButton class="text-dark" class="custom-button" (click)="closeDialog(false)"><span class="p-button-label">Cancel</span></button>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

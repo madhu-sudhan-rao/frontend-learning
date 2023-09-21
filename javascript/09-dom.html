@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <button>
+        Hello
+    </button>
+
+    <button class="js-button">
+        Hello
+    </button>
+    
+
+    <script>
+
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button').innerHTML = 'changed';
+        document.querySelector('.js-button').innerHTML = 'also changed';
+
+        // console.log(document.title)
+        // document.title = 'Changed';
+        // console.log(document.body)
+
+        // document.body.innerHTML = "hello";
+        // document.title = 'Good Job'
+
+    </script>
+</body>
+</html>

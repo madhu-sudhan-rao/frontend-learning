@@ -1,0 +1,64 @@
+
+.block{
+    background-color: var(--background-color-dim);
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.songs-btn{
+    text-decoration: none;
+    color: var(--white-color);
+    padding-bottom: 4px;
+}
+
+.active{
+    color: var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.custom-button{
+    background-color: var(--primary-color);
+    border-radius: 30px ;
+    border: none;
+    height: 40px;
+    
+    &:hover{
+        background-color: var(--primary-color);
+    }
+    
+    span{
+        color: var(--black-color);
+        font-size: 14px;
+    }
+}
+
+
+
+.pi-cloud-upload{
+    color: var(--black-color);
+}
+
+.search-box{
+
+    input{
+        background-color: var(--background-color-dim);
+        border-radius: 30px;
+        color: var(--white-color);
+        font-family: 'Oswald';
+        font-size: 14px;
+        border: 2px solid var(--white-color);
+        height: 40px;
+        
+    }
+}
+::ng-deep{
+    .p-button:focus {
+        box-shadow: none;
+    }
+
+    .p-inputtext:enabled:focus {
+        box-shadow: none;
+    }
+}

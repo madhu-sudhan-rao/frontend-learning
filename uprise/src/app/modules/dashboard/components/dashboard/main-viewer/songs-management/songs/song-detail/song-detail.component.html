@@ -1,0 +1,63 @@
+<div class="container-fluid  ">
+    <p-table 
+        [value]="songs" 
+        class="" 
+        [paginator]="true" 
+        [rows]="2" 
+        [columns]="songs"
+        >
+        <ng-template pTemplate="header" class="">
+            <tr class="">
+                <td class="text-center custom-header p-3">Poster</td>
+                <td class="text-center custom-header p-3">Title</td>
+                <td class="text-center custom-header p-3">Duration</td>
+                <td class="text-center custom-header p-3">Genre</td>
+                <td class="text-center custom-header p-3">Location</td>
+                <td class="text-center custom-header p-3">Uploaded on</td>
+                <td class="text-center custom-header p-3">Live</td>
+                <td class="text-center custom-header p-3">Actions</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-song>
+            <tr class="text-center">
+                <td class="custom-row text-center">
+                    <img src="{{song.thumbnail}}" class="thumbnail" alt="{{song.title}}">
+                </td>
+                <td class="custom-row text-center">{{song.title}}</td>
+                <td class="custom-row text-center">{{ formatDuration(song.duration) }}</td>
+                <td class="custom-row text-center">{{song.genres[0].genre_name}}</td>
+                <td class="custom-row text-center">{{song.cityName}}</td>
+                <td class="custom-row text-center">{{song.createdAt | date: 'MM/dd/yy'}}</td>
+                <td class="custom-row text-center">
+                    <p-inputSwitch [(ngModel)]="song.live"
+                        (click)="toggleLiveStatus(song.id,song.live)"></p-inputSwitch>
+                </td>
+                <td class="custom-row">
+                    <button pRipple class="action-btn p-2 w-50">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                    <button class="action-btn p-2 w-50" (click)="openDialogBox(song.id)">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+
+
+        </ng-template>
+<!-- 
+        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120"
+            [rowsPerPageOptions]="[10, 20, 30]"></p-paginator> -->
+        <!-- <ng-template pTemplate="empty">
+            <tr class="text-center text-white">
+                <td colspan="8">No Records Found</td>
+            </tr>
+        </ng-template> -->
+
+    </p-table>
+    <!-- <p-confirmDialog header="Delete Song?" icon="pi pi-exclamation-triangle">
+        <p>Are you sure you want to delete this song?</p>
+    </p-confirmDialog> -->
+</div>
+
+<ngx-spinner bdColor="rgba(0,0,0,0.2)" size="large" color="#006575" type="ball-clip-rotate">
+</ngx-spinner>
