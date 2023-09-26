@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { TableModule } from 'primeng/table';
+import { TableBody, TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { RippleModule } from 'primeng/ripple';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
@@ -13,6 +13,8 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { CustomDialogService } from 'src/app/shared/custom-dialog.service';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { PaginatorModule } from 'primeng/paginator';
+import { FileUploadModule } from 'primeng/fileupload';
+import { DialogModule } from 'primeng/dialog';
 
 const PrimeNgComponents = [
   ButtonModule,
@@ -24,7 +26,9 @@ const PrimeNgComponents = [
   ToastModule,
   DynamicDialogModule,
   InputSwitchModule,
-  PaginatorModule
+  PaginatorModule,
+  FileUploadModule,
+  DialogModule
   
 ]
 

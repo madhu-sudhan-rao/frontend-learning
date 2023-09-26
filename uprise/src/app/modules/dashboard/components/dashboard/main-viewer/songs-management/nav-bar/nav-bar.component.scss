@@ -4,6 +4,7 @@
     width: 100%;
     margin: 0px;
     padding: 0px;
+    height: 89%;
 
 }
 
@@ -60,5 +61,56 @@
 
     .p-inputtext:enabled:focus {
         box-shadow: none;
+    }
+
+    .p-dialog {
+        width: 62%;
+        border-radius: 3px;
+        box-shadow: 0 11px 15px -7px #0003, 0 24px 38px 3px #00000024, 0 9px 46px 8px #0000001f;
+        border: 0.6px solid rgba(240,240,240,.2);
+
+
+    }
+
+    .p-dialog .p-dialog-header {
+        border-bottom: 0 none;
+        background: var(--secondary-color);
+        padding: 10px;
+        border: 0.6px solid rgba(240,240,240,.2);
+        border-radius: 0px;
+
+        .p-dialog-title{
+            color: var(--primary-color);
+        }
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon {
+        width: 2rem;
+        height: 2rem;
+        color: #6c757d;
+        border: 0 none;
+        background: transparent;
+        border-radius: 50%;
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        margin-right: 0.5rem;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon:enabled:hover {
+        color: #000000;
+        border-color: transparent;
+        background: #505254;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-header-icon:focus {
+        box-shadow: none;
+    }
+
+    .p-dialog .p-dialog-content {
+        background: #282828;
+        color: #495057;
+        padding: 0 1.5rem 2rem 1.5rem;
+        border: 0.6px solid rgba(240,240,240,.2);
+        border-radius: 0px;
+
     }
 }

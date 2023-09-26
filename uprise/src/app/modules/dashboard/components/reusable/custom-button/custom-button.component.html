@@ -1,0 +1,21 @@
+<button
+    *ngIf = "isDecision === 'true'"
+    pButton
+    [ngClass]="{'primary-button': buttonType === 'primary' , 'secondary-button' : buttonType === 'secondary' , 'mediumButton': upload === ''}"
+>
+    <span class="p-button-label">{{label}}</span>
+</button>
+<button
+    *ngIf = "upload === 'true'"
+    pButton
+    icon="pi pi-cloud-upload text-dark me-2" 
+    [ngClass]="{'primary-button': buttonType === 'primary', 'secondary-button' : buttonType === 'secondary'}"
+>
+    <span class="p-button-label">{{label}}</span>
+</button>
+<button
+    *ngIf = "isIcon === 'true'"
+    class="delete-button"
+>
+<i class="pi pi-times-circle"></i>
+</button>

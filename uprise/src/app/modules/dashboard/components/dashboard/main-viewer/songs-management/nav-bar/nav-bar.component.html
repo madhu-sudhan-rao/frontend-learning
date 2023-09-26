@@ -11,7 +11,14 @@
                 </span>
             </div>
             <div class="button-box">
-                <button pButton icon="pi pi-cloud-upload text-dark me-2" class="custom-button"><span class="p-button-label">Upload Song</span></button>
+                <button 
+                    pButton 
+                    icon="pi pi-cloud-upload text-dark me-2" 
+                    class="custom-button"
+                    (click)="openUploadSongDialogBox()"
+                >
+                    <span class="p-button-label">Upload Song</span>
+                </button>
             </div>
         </div>
     </div>

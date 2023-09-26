@@ -35,7 +35,7 @@ export class ApiInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     
-    this.spinner.showSpinner()
+    this.spinner.showSpinner();
     const isLoginOrSignup = request.url.includes('login') || request.url.includes('signup');
     const isSongsList = request.url.includes('songs-list') || request.url.includes('live');
     const headers: CustomHeaders = {
@@ -51,23 +51,23 @@ export class ApiInterceptor implements HttpInterceptor {
     });
 
     return next.handle(modifiedRequest).pipe(
-      retry(1),
+      // retry(1),
       map((event: HttpEvent<any>) => {
           if (event instanceof HttpResponse) {
             this.response = event.body;
             this.responseData = event.body.data;
             this.responseMessage = event.body.message;
             if(!isSongsList){
-              this.spinner.hideSpinner();
               this.toaster.showSuccess(this.responseMessage);
             }
+            this.spinner.hideSpinner();
           }
-          this.spinner.hideSpinner();
           return event;
       }),
       catchError((error: HttpErrorResponse) => {
         this.toaster.showError(error.error?.error || "An error occured");
         console.log(error);
+        this.spinner.hideSpinner();
         return throwError(error);
       })
     );

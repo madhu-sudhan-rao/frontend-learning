@@ -1,0 +1,153 @@
+<div class="container w-100 pb-3 pt-4">
+    <div class="row">
+        <div class="col-6">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <app-custom-input
+                    type="file"
+                    kind="image"
+                    accept=".jpg, .jpeg, .png"
+                    required = 'false'
+                    #imageInput
+                    style="display: none;"
+                    name="image"
+                    (imageSelected) = "onImageSelected($event)"
+                ></app-custom-input>
+                <app-custom-button
+                    label="Upload Poster"
+                    buttonType="primary"
+                    upload="true"
+                    (click)="openImageInput()"
+                ></app-custom-button>
+            </div>
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-2">
+                <app-custom-paragraph
+                    content="Upload only .jpeg's , .png's and .gif's images"
+                    type="info"
+                ></app-custom-paragraph>
+            </div>
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-2"  *ngIf="imageSrc && imageSrc.length > 0" >
+                <div 
+                    class="image-container"
+                    (mouseenter) = "showDeleteButton = true"
+                    (mouseleave) = "showDeleteButton = false"
+                >
+                    <img 
+                        [src]="imageSrc" 
+                        alt=""
+                    >
+                    <app-custom-button
+                        class="delete-button" 
+                        *ngIf="showDeleteButton" 
+                        (click)="deleteImage()"
+                        isIcon = "true"
+                    ></app-custom-button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <app-custom-input
+                    type="file"
+                    kind="audio"
+                    required = "true"
+                    accept=".mp3, .wav"
+                    #audioInput
+                    style="display: none;"
+                    name="audio"
+                    (audioSelected) = "onAudioSelected($event)"
+                ></app-custom-input>
+                <app-custom-button
+                    label="Upload Song"
+                    buttonType="primary"
+                    upload="true"
+                    (click)="openAudioInput()"
+                ></app-custom-button>
+            </div>
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-2">
+                <app-custom-paragraph
+                    content="Upload only .mp3 and .wav songs."
+                    type="info"
+                ></app-custom-paragraph>
+            </div>
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-2"  *ngIf="audioSrc && audioSrc.length > 0" >
+                <div 
+                    class="image-container"
+                    (mouseenter) = "showDeleteButton = true"
+                    (mouseleave) = "showDeleteButton = false"
+                >
+                    <img [src]="audioSrc" class="song-bg" alt="">
+                    <app-custom-button 
+                        class="delete-button" 
+                        *ngIf="showDeleteButton" 
+                        (click)="deleteAudio()"
+                        isIcon = "true"
+                    ></app-custom-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr_class">
+    <div class="row">
+        <div class="col-6">
+            <app-custom-input
+                labelStatus = "true"
+                label = "Title"
+                type = "text"
+                required = "true"
+                placeholder = "Enter title"
+                class="input w-100 mb-3"
+                id="title"
+                name="title"
+                [value]="inputValue"
+                (inputText)="onInputChange('title',$event)"
+            ></app-custom-input>
+        </div>
+        <div class="col-6">
+            <app-custom-input
+
+                labelStatus = "true"
+                label = "City"
+                type = "text"
+                required = "true"
+                placeholder = "Enter city"
+                class="input w-100 mb-3"
+                id="city"
+                name="city"
+                [value]="inputValue"
+                (inputText)="onInputChange('city',$event)"
+            ></app-custom-input>
+        </div>
+        <div class="col-6">
+            <app-custom-input
+                labelStatus = "true"
+                label = "Genre"
+                type = "text"
+                required = "true"
+                placeholder = "Enter Genre"
+                class="input w-100 mb-3"
+                id="genre"
+                name="genre"
+                [value]="inputValue"
+                (inputText)="onInputChange('genre',$event)"
+            ></app-custom-input>
+        </div>
+    </div>
+    <div class="row d-flex ">
+        <div class="col d-flex justify-content-end gap-3">
+            <app-custom-button
+                label = "Cancel"
+                type = "secondary"
+                (click) = "onClose()"
+                isDecision = 'true'
+            ></app-custom-button>
+            <app-custom-button
+                label = "Save"
+                type = "primary"
+                (click)="onSave()"
+                isDecision = 'true'
+            ></app-custom-button>
+        </div>
+        
+    </div>
+</div>
+

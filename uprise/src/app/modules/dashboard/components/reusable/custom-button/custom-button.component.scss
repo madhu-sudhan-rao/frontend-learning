@@ -1,0 +1,62 @@
+.primary-button{
+    background-color: var(--primary-color);
+    border-radius: 30px ;
+    border: none;
+    height: 45px;
+    width: 150px;
+    
+    &:hover{
+        background-color: var(--primary-color);
+    }
+    
+    span{
+        color: var(--black-color);
+        font-size: 16px;
+    }
+}
+
+
+.secondary-button{
+    background-color: var(--secondary-color);
+    border-radius: 30px ;
+    border: 1px solid var(--primary-color);
+    height: 45px;
+    width: 150px;
+    
+    &:hover{
+        background-color: var(--secondary-color);
+        border-radius: 30px ;
+        border: 1px solid var(--primary-color);
+
+        span{
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+    }
+
+    span{
+        color: var(--primary-color);
+        font-size: 14px;
+    }
+
+}
+
+.pi-cloud-upload{
+    color: var(--black-color);
+}
+
+.mediumButton{
+    height: 38px;
+    width: 100px;
+
+}
+
+.delete-button{
+    background: transparent;
+    color: var(--white-color);
+    border: none;
+    i{
+        font-size: 16px;
+    }
+
+}

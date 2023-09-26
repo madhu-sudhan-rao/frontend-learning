@@ -18,6 +18,7 @@ export class ApisService {
   private songsListUrl: string = 'api/song/songs-list'
   private liveToggleUrl: string = 'api/song/live';
   private deleteSongUrl: string = 'api/song'
+  private uploadSongUrl: string = 'api/song/upload'
 
 
 
@@ -45,14 +46,15 @@ export class ApisService {
       songId: songId,
       live: live
     }
-
     return this.http.put(`${this.apiUrl}${this.liveToggleUrl}`,payload);
-
   }
 
   deleteSong(songId: number){
-    
     return this.http.delete(`${this.apiUrl}${this.deleteSongUrl}/${songId}`);
+  }
+
+  uploadSong(formData: FormData){
+    return this.http.post(`${this.apiUrl}${this.uploadSongUrl}`,formData);
   }
 
 }

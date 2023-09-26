@@ -1,0 +1,57 @@
+.primary{
+    background-color: var(--primary-color);
+    border-radius: 30px ;
+    border: none;
+    height: 40px;
+    width: 150px;
+    
+
+}
+
+.input{
+
+    background: rgb(15, 15, 15);
+    border: 0.6px solid rgba(240, 240, 240, 0.3);
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    padding-left: 10px !important;
+    padding: 5px;
+    width: 100%;
+
+
+    &:focus{
+        outline: 0px;
+        background-color: #0F0F0F;
+    }
+}
+
+
+::ng-deep{
+    .p-button {
+
+        *{
+            color: #000000;
+        }
+
+        background: var(--primary-color);
+        padding: 0.75rem 1.25rem;
+        font-size: 14px;
+        border-radius: 30px ;
+        border: none;
+        height: 40px;
+        width: 150px;
+
+            
+       
+    
+    }
+
+    .p-fileupload-choose:not(.p-disabled):hover {
+        background: var(--primary-color);
+        color: var(--black-color);
+        border-color: var(--primary-color);
+    }
+
+   
+}

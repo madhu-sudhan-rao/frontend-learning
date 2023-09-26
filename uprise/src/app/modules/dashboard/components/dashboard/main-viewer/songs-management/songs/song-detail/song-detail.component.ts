@@ -19,25 +19,51 @@ export class SongDetailComponent implements OnInit {
   ){
   }
 
-  songs:any[] = [];
+  
+  // Paginator
+  paginatorStatus:boolean = false
+  totalRecords!:number;
+  rowsPerPageOptions: number[] = [10, 20, 30]; 
+  currentPage: number = 1;
+  rowsPerPage: number = 10;
+
+  
+  onPageChange(event: any) {
+    this.currentPage = event.page + 1; 
+    this.rowsPerPage = event.rows;
+    this.getBandIdAndGetSongs();
+  }
   
   ngOnInit(): void {
+    // Fetch songs when component initializes
+    this.getBandIdAndGetSongs();
     
+  }
+
+  // Get band Id from localstorage and fetch songs
+  getBandIdAndGetSongs(){
     const bandId = Number(localStorage.getItem('bandId'))
     if(bandId !== null){
       this.fetchSongs(bandId);
     } 
-    
   }
+
+  // Get Songs based on bandId, currentPage, and rowsPerPage
+  songs:any[] = [];
 
   fetchSongs(bandId: number): void{
     const search = '';
-    const currentPage = 1;
-    const perPage = 10;
+    const perPage = this.rowsPerPage;
+    const currentPage = this.currentPage;
 
     this.api.getSongs(bandId, search, currentPage, perPage)
       .subscribe((response: any)=> {
         this.songs = response.data.data;
+        // Check if pagination should be displayed
+        if(this.songs.length > 2){
+          this.paginatorStatus = true;
+        }
+        this.totalRecords = response.data.data[0].totalCount;
       },
       (error)=>{
         console.log('Error is: ', error)
@@ -45,14 +71,15 @@ export class SongDetailComponent implements OnInit {
 
   }
 
-  bandId = Number(localStorage.getItem('bandId'))
 
+  // Format duration in minutes and seconds
   formatDuration(durationInSeconds: number): string{
     const minutes = Math.floor(durationInSeconds / 60);
     const seconds = Math.floor(durationInSeconds % 60);
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   }
   
+  // Toggle live status of a song
   toggleLiveStatus(songId: number, liveStatus: boolean): void{
     this.api.changeLiveStatus(songId, liveStatus).subscribe(
       (response: any)=>{
@@ -67,10 +94,12 @@ export class SongDetailComponent implements OnInit {
     )
   }
 
+  //  Delete a song
   deleteSong(songId: number): void{
     this.api.deleteSong(songId).subscribe(
       (response: any) => {
-        this.toaster.showSuccess(response.message)
+        // Fetch songs again after deletion
+        this.getBandIdAndGetSongs();
       },
       (error) => {
         console.log("Error is : ", error);
@@ -79,12 +108,12 @@ export class SongDetailComponent implements OnInit {
     )
   }
 
+  // Open a custom confirmation dialog
   openDialogBox(songId: number): void{
     this.customDialog.openDialog('Are you sure you want to delete this song?')
       .subscribe( (result) => {
         if(result === true){
           this.deleteSong(songId);
-          this.fetchSongs(this.bandId);
         } else {
           this.toaster.showWarning('Deletion Cancelled')
         }
@@ -92,12 +121,12 @@ export class SongDetailComponent implements OnInit {
 
   }
 
+  // Show PrimeNG confirmation dialog
   showConfirmationDialog(songId: number) {
     this.confirmationService.confirm({
       message: 'Are you sure you want to delete this song?', 
       accept: () => {
         this.deleteSong(songId);
-        this.fetchSongs(this.bandId);
       },
       reject: () => {
         this.toaster.showWarning('Deletion Cancelled.')

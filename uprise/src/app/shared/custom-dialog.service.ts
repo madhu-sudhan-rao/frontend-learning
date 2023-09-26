@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { DialogService } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { DialogBoxComponent } from '../wild-card-components/dialog-box/dialog-box.component';
+import { UploadSongDialogComponent } from '../modules/dashboard/components/upload-song-dialog/upload-song-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,17 @@ export class CustomDialogService {
     private dialogService: DialogService
   ) { }
 
+  ref: DynamicDialogRef | undefined;
+
+  show(header: string){
+    this.ref = this.dialogService.open(UploadSongDialogComponent, {
+      header: header,
+      closable: true
+    });
+  }
+
   openDialog(message: string){
-    const ref = this.dialogService.open(DialogBoxComponent, {
+    const res = this.dialogService.open(DialogBoxComponent, {
       width: 'fit-content',
       data: { message },
       closable: false,
@@ -25,6 +35,13 @@ export class CustomDialogService {
       
     });
 
-    return ref.onClose;
+    return res.onClose;
+  }
+
+  closeDialog(){
+    if(this.ref){
+      this.ref.close();
+    }
+  
   }
 }

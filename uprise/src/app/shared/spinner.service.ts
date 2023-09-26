@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
 
 
@@ -6,19 +6,17 @@ import { NgxSpinnerService } from "ngx-spinner";
   providedIn: 'root'
 })
 
-export class SpinnerService implements OnInit{
+export class SpinnerService{
 
   constructor(
     private spinner: NgxSpinnerService
   ) { }
-  ngOnInit(): void {
-    this.spinner.show();
-  }
+
 
   showSpinner(){
     this.spinner.show();
   }
-
+  
   hideSpinner(){
     this.spinner.hide();
   }

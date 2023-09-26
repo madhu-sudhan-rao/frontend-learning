@@ -54,4 +54,8 @@ export class UserDataService {
     const bandId = this.userData.bands.id;
     return bandId;
   }
+
+  getUserId(): string{
+    return this.userData.id;
+  }
 }

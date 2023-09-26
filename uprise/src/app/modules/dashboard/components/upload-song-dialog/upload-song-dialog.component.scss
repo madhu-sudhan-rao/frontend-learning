@@ -1,0 +1,38 @@
+.container{
+    width: 50vw;
+}
+
+
+.hr_class {
+    border: 0.8px solid rgba(240, 240, 240, 0.599);
+}
+
+.image-container{
+
+    position: relative;
+    height: 160px;
+    width: 160px;
+
+    img {
+        height: 160px;
+        aspect-ratio: auto 160 / 160;
+        width: 160px;
+    }
+    
+    .delete-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &:hover{
+        img{
+            filter: brightness(50%);
+        }
+    }
+}
+
+.song-bg{
+    background: rgba(220, 247, 99, 0.18);
+}
+

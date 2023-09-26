@@ -2,9 +2,6 @@
     <p-table 
         [value]="songs" 
         class="" 
-        [paginator]="true" 
-        [rows]="2" 
-        [columns]="songs"
         >
         <ng-template pTemplate="header" class="">
             <tr class="">
@@ -41,23 +38,25 @@
                     </button>
                 </td>
             </tr>
-
-
         </ng-template>
-<!-- 
-        <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120"
-            [rowsPerPageOptions]="[10, 20, 30]"></p-paginator> -->
-        <!-- <ng-template pTemplate="empty">
-            <tr class="text-center text-white">
-                <td colspan="8">No Records Found</td>
-            </tr>
-        </ng-template> -->
-
+        
     </p-table>
+    
+            <p-paginator 
+                (onPageChange)="onPageChange($event)" 
+                [first]="currentPage - 1" 
+                [rows]="rowsPerPage" 
+                [totalRecords]="totalRecords"
+                [rowsPerPageOptions]="rowsPerPageOptions"
+                >
+            </p-paginator>
+            <!-- <ng-template pTemplate="empty">
+                <tr class="text-center text-white">
+                    <td colspan="8">No Records Found</td>
+                </tr>
+            </ng-template> -->
     <!-- <p-confirmDialog header="Delete Song?" icon="pi pi-exclamation-triangle">
         <p>Are you sure you want to delete this song?</p>
     </p-confirmDialog> -->
 </div>
 
-<ngx-spinner bdColor="rgba(0,0,0,0.2)" size="large" color="#006575" type="ball-clip-rotate">
-</ngx-spinner>

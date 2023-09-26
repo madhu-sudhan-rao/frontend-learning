@@ -15,6 +15,10 @@
 
 ::ng-deep{
 
+    tbody{
+        height: 100px;
+    }
+
     .p-datatable .p-datatable-tbody > tr > td {
         border: none;
         border-bottom: 0.6px solid rgba(240, 240, 240, 0.2);
@@ -23,9 +27,9 @@
 }
 
 .thumbnail{
+    // background: url('../../../../../../../../../assets/images/default_poster.png');
     max-height: 60px;
     max-width: 60px;
-    object-fit: cover;
 }
 
 .action-btn{
@@ -90,4 +94,43 @@
         height: 2.357rem;
         min-width: 2.357rem;
     }
+}
+
+::ng-deep{
+    .p-dropdown {
+        background: #202020;
+        border: none; 
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        border-radius: 3px;
+    }
+
+    .p-inputtext {
+        color: var(--white-color);
+    }
+
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+        background: #0f0f0f;
+    }
+
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight,
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+        color: #ffffff;
+        background: #333333;
+    }
+
+    .p-dropdown-panel {
+        background: #0f0f0f;
+    }
+
+    .p-paginator .p-dropdown {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        height: 2.357rem;
+    }
+
+    .p-inputtext{
+        padding: .5rem;
+    }
+
+   
 }

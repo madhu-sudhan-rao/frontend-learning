@@ -28,6 +28,8 @@ import { DialogBoxComponent } from './wild-card-components/dialog-box/dialog-box
 import { ApiInterceptor } from './interceptors/api.interceptor';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { SpinnerService } from './shared/spinner.service';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { SpinnerComponent } from './modules/dashboard/components/reusable/spinner/spinner.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { SpinnerService } from './shared/spinner.service';
     SongDetailComponent,
     PageNotFoundComponent,
     DialogBoxComponent,
+    SpinnerComponent
+
     
   ],
   imports: [
@@ -64,7 +68,8 @@ import { SpinnerService } from './shared/spinner.service';
     }),
     BrowserAnimationsModule,
     PrimeNgModule,
-    NgxSpinnerModule.forRoot()
+    NgxSpinnerModule.forRoot(),
+    DashboardModule
         
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -76,6 +81,6 @@ import { SpinnerService } from './shared/spinner.service';
       multi: true
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

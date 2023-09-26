@@ -1,0 +1,38 @@
+<div class="custom-input-container">
+    <div class="mb-2"
+        *ngIf = "labelStatus === 'true'"
+    >
+        <label [for]="id">{{label}}</label>
+    </div>
+    <input 
+        *ngIf = "type !== 'file'"
+        [type]="type"
+        [placeholder]="placeholder"
+        [required]="required"
+        [(ngModel)]="value"
+        [id]="id"
+        [ngClass]="className"
+        [name]="name"
+        (change)="onInputChange($event)"
+    >
+    <input
+        *ngIf = "kind === 'image'"
+        [type] = "type"
+        [required]="required"
+        [accept] = "accept"
+        id="fileInput"
+        name="fileInput"
+        #fileInput
+        (change)="onFileSelected($event)"
+    >
+    <input
+        *ngIf="kind === 'audio'"
+        [type]="type"
+        [required]="required"
+        [accept]="accept"
+        id="audioInput"
+        name="audioInput"
+        #audioInput
+        (change)="onFileSelected($event)"
+    >
+</div>
