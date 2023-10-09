@@ -1,5 +1,6 @@
 <div class="custom-input-container">
-    <div class="mb-2"
+    <div 
+        class="mb-2"
         *ngIf = "labelStatus === 'true'"
     >
         <label [for]="id">{{label}}</label>
@@ -9,12 +10,12 @@
         [type]="type"
         [placeholder]="placeholder"
         [required]="required"
-        [(ngModel)]="value"
         [id]="id"
         [ngClass]="className"
         [name]="name"
-        (change)="onInputChange($event)"
-    >
+        [formControlName]="name"
+        >
+        <!-- [formControl]="control" -->
     <input
         *ngIf = "kind === 'image'"
         [type] = "type"
@@ -35,4 +36,4 @@
         #audioInput
         (change)="onFileSelected($event)"
     >
-</div>
+</div> 

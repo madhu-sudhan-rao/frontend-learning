@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SongsManagementComponent {
 
+  searchText: string = '';
+
+  handleSearchTextChange(text: string) {
+    this.searchText = text;
+    // console.log(this.searchText)
+  }
+
 }

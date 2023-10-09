@@ -1,5 +1,5 @@
 .container-fluid{
-    background: #000;
+    background: var(--black-color);
     box-shadow: 0px -1px 0px 0px rgba(240, 240, 240, 0.20) inset;
 }
 
@@ -12,16 +12,17 @@
     max-height: 42px;
     max-width: 42px;
     border-radius: 50%;
+    background-color: var(--profile-bg);
 }
 
 .profile-btn{
     border: none;
-    background-color: #000;
+    background-color: var(--black-color);
 }
 
 .dropdown{
     
-    background-color: #282828;
+    background-color: var(--secondary-color);
     width: 200px;
     border-radius: 5px;
     position: absolute;
@@ -29,10 +30,8 @@
     right: 15px;
     top: 60px;
     
-
-    
     .options{
-        background-color: #282828;
+        background-color: var(--secondary-color);
         border: none;
         font-size: 14px;
         letter-spacing: 0.3px;
@@ -42,5 +41,14 @@
             border-radius: 2.5px;
 
         }
+    }
+}
+
+.toggle-button{
+    background: var(--black-color);
+    border: none;
+
+    &:focus{
+        background-color: #282828;
     }
 }

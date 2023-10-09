@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-custom-input',
@@ -11,24 +12,37 @@ export class CustomInputComponent {
   @Input() kind = '';
   @Input() placeholder = '';
   @Input() required = 'false';
+  @Input() ngValue = '';
   @Input() value = '';
+  @Input() formControlName = '';
   @Input() accept = '';
   @Input() label = '';
   @Input() labelStatus = 'false';
   @Input() id = '';
   @Input() name = '';
   @Input('class') className = '';
+  @Input() control!: FormControl;
   @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
   @ViewChild('audioInput') audioInput!: ElementRef<HTMLInputElement>;
   @Output() imageSelected = new EventEmitter<File>();
   @Output() audioSelected = new EventEmitter<File>();
   @Output() inputText = new EventEmitter<string>();
 
+  constructor(
+    private fb: FormBuilder
+  ){}
+
+
+    // Create a form group to handle the input value if needed
+    inputForm: FormGroup = this.fb.group({
+      inputValue: [''] // Initial value can be set here
+    });
 
   onInputChange(event: any){
     const value = event.target.value;
     this.inputText.emit(value);
   }
+
 
   openFileInput() {
     if (this.fileInput) {
@@ -63,6 +77,4 @@ export class CustomInputComponent {
       }
     }
   }
-
-
 }

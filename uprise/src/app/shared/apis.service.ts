@@ -12,22 +12,23 @@ export class ApisService {
     private http: HttpClient
   ) { }
 
-  private apiUrl: string = 'http://50.19.24.41/';
+  private baseUrl: string = 'http://50.19.24.41/';
   private loginUrl: string = 'api/auth/login';
   private signupUrl: string = 'api/auth/signup';
   private songsListUrl: string = 'api/song/songs-list'
   private liveToggleUrl: string = 'api/song/live';
   private deleteSongUrl: string = 'api/song'
   private uploadSongUrl: string = 'api/song/upload'
+  private editSongUrl: string = 'api/song/edit/'
 
 
 
   login(loginDetails: LoginDetails){
-    return this.http.post(`${this.apiUrl}${this.loginUrl}`, loginDetails);
+    return this.http.post(`${this.baseUrl}${this.loginUrl}`, loginDetails);
   }
   
   register(registerDetails: RegisterDetails){
-    return this.http.post(`${this.apiUrl}${this.signupUrl}`, registerDetails);
+    return this.http.post(`${this.baseUrl}${this.signupUrl}`, registerDetails);
   }
   
   getSongs(bandId: number, search: string, currentPage: number, perPage: number){
@@ -37,7 +38,7 @@ export class ApisService {
       .set('currentPage', currentPage.toString())
       .set('perPage', perPage.toString());
     
-    return this.http.get(`${this.apiUrl}${this.songsListUrl}`, { params: params });
+    return this.http.get(`${this.baseUrl}${this.songsListUrl}`, { params: params });
   }
 
   changeLiveStatus(songId: number, live: boolean){
@@ -46,15 +47,19 @@ export class ApisService {
       songId: songId,
       live: live
     }
-    return this.http.put(`${this.apiUrl}${this.liveToggleUrl}`,payload);
+    return this.http.put(`${this.baseUrl}${this.liveToggleUrl}`,payload);
   }
 
   deleteSong(songId: number){
-    return this.http.delete(`${this.apiUrl}${this.deleteSongUrl}/${songId}`);
+    return this.http.delete(`${this.baseUrl}${this.deleteSongUrl}/${songId}`);
   }
 
   uploadSong(formData: FormData){
-    return this.http.post(`${this.apiUrl}${this.uploadSongUrl}`,formData);
+    return this.http.post(`${this.baseUrl}${this.uploadSongUrl}`,formData);
+  }
+
+  editSong(formData: FormData, songId: number){
+    return this.http.put(`${this.baseUrl}${this.editSongUrl}${songId}`, formData)
   }
 
 }

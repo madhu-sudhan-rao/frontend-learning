@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { LoginComponent } from './user-auth/login/login.component';
 import { RegisterComponent } from './user-auth/register/register.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,6 +30,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { SpinnerService } from './shared/spinner.service';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { SpinnerComponent } from './modules/dashboard/components/reusable/spinner/spinner.component';
+import { SongCardViewComponent } from './modules/dashboard/components/dashboard/main-viewer/songs-management/songs/song-card-view/song-card-view.component';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { SpinnerComponent } from './modules/dashboard/components/reusable/spinne
     SongDetailComponent,
     PageNotFoundComponent,
     DialogBoxComponent,
-    SpinnerComponent
+    SpinnerComponent,
 
     
   ],
@@ -59,6 +60,7 @@ import { SpinnerComponent } from './modules/dashboard/components/reusable/spinne
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot({
       timeOut: 3000,
@@ -69,8 +71,7 @@ import { SpinnerComponent } from './modules/dashboard/components/reusable/spinne
     BrowserAnimationsModule,
     PrimeNgModule,
     NgxSpinnerModule.forRoot(),
-    DashboardModule
-        
+    DashboardModule,        
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

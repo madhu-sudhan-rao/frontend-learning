@@ -1,6 +1,9 @@
-<div class="container- block m-0 p-0">
-    <app-nav-bar></app-nav-bar>
-</div>
-<div class="content">
-    <router-outlet></router-outlet>
+<div class="cont">
+    <div class="container- block m-0 p-0">
+        <app-nav-bar (searchTextChange)="handleSearchTextChange($event)"></app-nav-bar>
+    </div>
+    <div class="content">
+        <!-- <app-songs-list></app-songs-list> -->
+        <app-song-detail [searchText]="searchText"></app-song-detail>
+    </div>
 </div>

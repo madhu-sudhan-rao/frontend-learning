@@ -11,6 +11,7 @@
                     style="display: none;"
                     name="image"
                     (imageSelected) = "onImageSelected($event)"
+                    
                 ></app-custom-input>
                 <app-custom-button
                     label="Upload Poster"
@@ -87,113 +88,52 @@
         </div>
     </div>
     <hr class="hr_class">
-    <!-- <div class="row">
-        <form [formGroup]="songForm">
-            <div class="col-6">
-                <app-custom-input
-                    labelStatus = "true"
-                    label = "Title"
-                    type = "text"
-                    [control]="songForm.get('title')!"
-                    placeholder = "Enter title"
-                    class="input w-100 mb-3"
-                    id="title"
-                    name="title"
-                ></app-custom-input>
-                <app-custom-input
-                    labelStatus = "true"
-                    label = "Title"
-                    type = "text"
-                    required = "true"
-                    placeholder = "Enter title"
-                    class="input w-100 mb-3"
-                    id="title"
-                    name="title"
-                    [value]="inputValue"
-                    (inputText)="onInputChange('title',$event)"
-                    formControlName = "title"
-                ></app-custom-input>
-            </div>
-            <div class="col-6">
-                <app-custom-input
-                    labelStatus = "true"
-                    label = "City"
-                    type = "text"
-                    [control]="songForm.get('city')!"
-                    placeholder = "Enter city"
-                    class="input w-100 mb-3"
-                    id="city"
-                    name="city"
-                ></app-custom-input>
-                <app-custom-input
-                    labelStatus = "true"
-                    label = "City"
-                    type = "text"
-                    required = "true"
-                    placeholder = "Enter city"
-                    class="input w-100 mb-3"
-                    id="city"
-                    name="city"
-                    [value]="inputValue"
-                    (inputText)="onInputChange('city',$event)"
-                    formControlName = "city"
-                ></app-custom-input>
-            </div>
-            <div class="col-6">
-                <app-custom-input
-                    labelStatus = "true"
-                    label = "Genre"
-                    type = "text"
-                    [control]="songForm.get('genre')!"
-                    placeholder = "Enter Genre"
-                    class="input w-100 mb-3"
-                    id="genre"
-                    name="genre"
-                ></app-custom-input>
-                <app-custom-input
-                    labelStatus = "true"
-                    label = "Genre"
-                    type = "text"
-                    required = "true"
-                    placeholder = "Enter Genre"
-                    class="input w-100 mb-3"
-                    id="genre"
-                    name="genre"
-                    [value]="inputValue"
-                    (inputText)="onInputChange('genre',$event)"
-                    formControlName = "genre"
-                ></app-custom-input>
-            </div>
-        </form>
-    </div> -->
-    <form [formGroup]="songForm">
-            <div class="row">
-            <div class="col-6">
-                <div class="">
-                    <label for="title">Title</label>
-                </div>
-                <div class="">
-                    <input type="text" class="input" id="title" formControlName="title" placeholder="Enter title">
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="">
-                    <label for="city">City</label>
-                </div>
-                <div class="">
-                    <input type="text" class="input" id="city" formControlName="city" placeholder="Enter city">
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="">
-                    <label for="genre">Genre</label>
-                </div>
-                <div class="">
-                    <input type="text" class="input" id="genre" formControlName="genre" placeholder="Enter genre">
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-6">
+            <app-custom-input
+                labelStatus = "true"
+                label = "Title"
+                type = "text"
+                required = "true"
+                placeholder = "Enter title"
+                class="input w-100 mb-3"
+                id="title"
+                name="title"
+                [value]="inputValue"
+                (inputText)="onInputChange('title',$event)"
+                [value]="songData.title"
+            ></app-custom-input>
         </div>
-        </form>
+        <div class="col-6">
+            <app-custom-input
+
+                labelStatus = "true"
+                label = "City"
+                type = "text"
+                required = "true"
+                placeholder = "Enter city"
+                class="input w-100 mb-3"
+                id="city"
+                name="city"
+                [value]="inputValue"
+                (inputText)="onInputChange('city',$event)"
+            ></app-custom-input>
+        </div>
+        <div class="col-6">
+            <app-custom-input
+                labelStatus = "true"
+                label = "Genre"
+                type = "text"
+                required = "true"
+                placeholder = "Enter Genre"
+                class="input w-100 mb-3"
+                id="genre"
+                name="genre"
+                [value]="inputValue"
+                (inputText)="onInputChange('genre',$event)"
+            ></app-custom-input>
+        </div>
+    </div>
     <div class="row d-flex ">
         <div class="col d-flex justify-content-end gap-3">
             <app-custom-button
@@ -205,10 +145,11 @@
             <app-custom-button
                 label = "Save"
                 type = "primary"
-                (click)="onUpdateSong()"
+                (click)="onSave()"
                 isDecision = 'true'
             ></app-custom-button>
         </div>
         
     </div>
 </div>
+

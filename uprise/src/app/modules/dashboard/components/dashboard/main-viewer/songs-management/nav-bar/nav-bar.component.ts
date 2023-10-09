@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Subject } from 'rxjs';
 import { CustomDialogService } from 'src/app/shared/custom-dialog.service';
 
 @Component({
@@ -8,14 +9,23 @@ import { CustomDialogService } from 'src/app/shared/custom-dialog.service';
 })
 export class NavBarComponent {
 
+  @Output() searchTextChange = new EventEmitter<string>();
+
   value!:string;
+  searchResults: any[]=[];
+  private searchTerms = new Subject<string>();
+
   constructor(
     private dialog: CustomDialogService
   ){}
 
 
   openUploadSongDialogBox(){
-    this.dialog.show('Upload Song');
+    this.dialog.openUploadSongDialogBox('Upload Song');
+  }
+
+  onSearchText(){
+    this.searchTextChange.emit(this.value)
   }
 
 }

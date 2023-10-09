@@ -1,45 +1,44 @@
 .nav-container{
     min-height: 88.5vh;
-    // min-height: 100%;
 }
 
 
 .nav-buttons{
-    background-color: #000;
+    background-color: var(--black-color);
     border: none;
     text-decoration: none;
 
     &:hover{
         span i{
-            color: #D7FD2C ;
+            color: var(--active-text-color) ;
         }
         div{
-            color: #D7FD2C ;
+            color: var(--active-text-color) ;
         }
     }
 
     div{
         font-size: 14px;
         font-weight: 600;
-        line-height: 22px; /* 157.143% */
+        line-height: 22px; 
         letter-spacing: 0.44px;
     }
 
     &:active{
         span i{
-            color: #D7FD2C ;
+            color: var(--active-text-color) ;
         }
         div{
-            color: #D7FD2C ;
+            color: var(--active-text-color) ;
         }
     }
 }
 
 .active{
     span i{
-        color: #D7FD2C ;
+        color: var(--active-text-color) ;
     }
     div{
-        color: #D7FD2C ;
+        color: var(--active-text-color) ;
     }
 }

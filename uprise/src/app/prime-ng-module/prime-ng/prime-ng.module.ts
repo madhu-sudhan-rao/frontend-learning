@@ -15,6 +15,8 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { PaginatorModule } from 'primeng/paginator';
 import { FileUploadModule } from 'primeng/fileupload';
 import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
+import { ChipModule } from 'primeng/chip';
 
 const PrimeNgComponents = [
   ButtonModule,
@@ -28,7 +30,9 @@ const PrimeNgComponents = [
   InputSwitchModule,
   PaginatorModule,
   FileUploadModule,
-  DialogModule
+  DialogModule,
+  CardModule,
+  ChipModule
   
 ]
 

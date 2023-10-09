@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  isSidebarVisible = true;
+
+  toggleSidebar(isVisible: any) {
+    this.isSidebarVisible = isVisible;
+}
+
 }

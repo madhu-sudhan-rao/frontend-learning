@@ -24,6 +24,7 @@ export class ApiInterceptor implements HttpInterceptor {
   private clientId: string = '437920819fa89d19abe380073d28839c';
   private clientSecret: string = '28649120bdf32812f433f428b15ab1a1';
   private authKey: string = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEyLCJlbWFpbCI6Im1hZGh1QHlvcG1haWwuY29tIiwiaWF0IjoxNjk0MjQ4OTgwLCJleHAiOjMxNzIzODY5MTM4MH0.vic1xA0lDMAEJZybzIDAIXlp_LbSVR8ZCbmGJQOXLio';
+  // private authKey: string = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEyLCJlbWFpbCI6Im1hZGh1QHlvcG1haWwuY29tIiwiaWF0IjoxNjk2NDEzMTk5LCJleHAiOjMxNzI0MDg1NTU5OX0.LaIHznyffEZtHyzITFg9_2QCbUBYXdy40-vzbk5C4SY';
   private response: any;
   private responseData: any;
   private responseMessage!: string;

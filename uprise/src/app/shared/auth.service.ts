@@ -23,6 +23,7 @@ export class AuthService {
   logout(){
     localStorage.removeItem('token');
     localStorage.removeItem('bandId');
+    localStorage.removeItem('user')
     this.toaster.showSuccess('You have been logged out')
     this.router.navigate(['login']);
   }

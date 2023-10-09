@@ -1,13 +1,10 @@
 <div class="container- block m-0 p-0">
     <div class="row p-0 m-0 d-flex align-items-center">
-        <div class="col p-4">
-            <a [routerLink]="['songs']" class="songs-btn"  [routerLinkActive]="['active']">All Songs</a>
-        </div>
-        <div class="col d-flex align-items-center justify-content-end  gap-3">
+        <div class="col pt-3 pb-2 d-flex align-items-center justify-content-end  gap-3">
             <div class="search-box">
                 <span class="p-input-icon-left">
                     <i class="pi pi-search text-white fs-6"></i>
-                    <input type="text" class="w-100" pInputText [(ngModel)]="value" placeholder="Search songs..." />
+                    <input type="text" class="w-100" pInputText [(ngModel)]="value" (input)="onSearchText()"  placeholder="Search songs..." />
                 </span>
             </div>
             <div class="button-box">
