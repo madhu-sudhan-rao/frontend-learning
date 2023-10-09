@@ -35,12 +35,6 @@
     background: none;
     border: none;
     transition: all 0.3s ease-in-out;
-
-    &:hover{
-        // background-color: #333333;
-        border-radius: 2px;
-
-    }
     cursor: pointer;
     
 }
@@ -53,11 +47,8 @@
 
 .live-block{
     position: relative;
-    // top: 12px;
+    top: 12px;
 }
-
-
-
 
 .p-dialog{
     background-color: black;
