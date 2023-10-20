@@ -1,0 +1,48 @@
+<div class="display-1 text-center mb-4">Interpolation</div>
+<div class="row gap-3 ms-3">
+    <div class="card col-5 ">
+        <div class="card-header">
+            Basic
+        </div>
+        <div class="card-body">
+            <div class="card-text ">
+                My name is {{name}}.
+            </div>
+            <div class="card-footer mt-4" ngNonBindable>
+                <code>
+                    My name is {{name}}.
+                </code>
+            </div>
+        </div>
+    </div>
+    <div class="card col-5">
+        <div class="card-header">
+            Function
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                My Age is {{getAge()}}.
+            </div>
+            <div class="card-footer mt-4" ngNonBindable>
+                <code>
+                    My Age is {{getAge()}}.
+                </code>
+            </div>
+        </div>
+    </div>
+    <div class="card col-5">
+        <div class="card-header">
+            Expression
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                My age is {{age > 18 ? age : 'minor'}}.
+            </div>
+            <div class="card-footer mt-4" ngNonBindable>
+                <code>
+                    My age is {{age > 18 ? age : 'minor'}}.
+                </code>
+            </div>
+        </div>
+    </div>
+</div>

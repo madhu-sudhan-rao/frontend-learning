@@ -66,7 +66,7 @@ export class UploadSongDialogComponent implements OnInit {
     title: new FormControl(''),
     city: new FormControl(''),
     genre: new FormControl(''),
-    thumbnail: new FormControl(null), // Initialize with null, you can set the value when the image is selected
+    thumbnail: new FormControl(null),
     song: new FormControl(null)
   })
 
@@ -189,8 +189,9 @@ export class UploadSongDialogComponent implements OnInit {
     )
   }
 
-  onUpdateSong(){
+  onUpdateSong(event: any){
 
+    console.log(event)
     const id = 245;
     console.log(this.songForm.controls)
     const titleValue = this.songForm.get('title')?.value;
@@ -223,6 +224,7 @@ export class UploadSongDialogComponent implements OnInit {
     this.api.editSong(formData, id).subscribe(
       (response: any) => {
         this.sharedService.updateSongCompleted();
+        this.songForm.reset()
         this.dialog.closeDialog()
       },
       (error) => {
@@ -236,7 +238,7 @@ export class UploadSongDialogComponent implements OnInit {
 
   handleSave(parameter: any){
     if(parameter){
-      this.onUpdateSong()
+      this.onUpdateSong(parameter)
     } else{
       this.onSave()
     }

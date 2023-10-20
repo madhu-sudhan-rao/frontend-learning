@@ -12,7 +12,6 @@ export class CustomDialogService {
   constructor(
     private dialogService: DialogService
   ) { }
-
   ref: DynamicDialogRef | undefined;
 
   openUploadSongDialogBox(header: string){
@@ -21,6 +20,7 @@ export class CustomDialogService {
       closable: true,
   
     });
+    
   }
 
   openEditSongDialogBox(header: string, song: any){

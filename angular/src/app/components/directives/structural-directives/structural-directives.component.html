@@ -1,0 +1,33 @@
+<div class="display-1 text-center mb-4"> Structural Directives</div>
+<div class="row gap-3 ms-3">
+    <div class="card col-5 ">
+        <div class="card-header">
+            Structural Directive
+        </div>
+        <div class="card-body">
+            <div class="card-text">
+                <div class="">
+                    <button class="btn btn-primary" (click)="condition = !condition">
+                        Toggle condition to {{condition ? 'false' : 'true'}}
+                    </button>
+                </div>
+                <p>
+                    The condition is currently <span>{{condition}}</span>.
+                </p>
+            </div>
+            <div class="card-text  ">
+                <p *appUnless="condition">
+                    (A) This paragraph is displayed because the condition is false.
+                </p>
+                <p *appUnless="!condition">
+                    (B) Although the condition is true, this paragraph is displayed because appUnless is set to false.
+                </p>
+            </div>
+            <div class="card-footer mt-4" >
+                <code>
+                  
+                </code>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="display-1 text-center mb-4">Attribute Directives</div>
+<div class="row gap-3 ms-3">
+    <div class="card col-5 ">
+        <div class="card-header">
+            Attribute Directive
+        </div>
+        <div class="card-body">
+            <div class="card-text  ">
+                <div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="colors" class="form-check-input" id="check1" (click)="color='lightgrey'">
+                        <label for="check1" class="form-check-label">Grey</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="colors" class="form-check-input" id="check2" (click)="color = 'pink'">
+                        <label for="check2" class="form-check-label">Pink</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="colors" class="form-check-input" id="check3" (click)="color = 'yellow'">
+                        <label for="check3" class="form-check-label">Yellow</label>
+                    </div>
+                </div>
+                <p [appHighlight]="color"  class="mt-3">Highlight me!</p>                
+                <p [appHighlight]="color" defaultColor="violet" class="mt-3">Highlight me too!</p>                
+                <p ngNonBindable [appHighlight]="color"  class="mt-3">This should not evaluate: {{ 1 + 1 }}</p>                
+            </div>
+            <div class="card-footer mt-4" >
+                <code>
+                  
+                </code>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<hr>
+<app-structural-directives></app-structural-directives>

@@ -1,0 +1,48 @@
+<div class="display-1 text-center mb-4">Event Binding</div>
+<div class="row gap-3 ms-3">
+    <div class="card col-5 ">
+        <div class="card-header ">
+            Basic
+        </div>
+        <div class="card-body">
+            <div class="card-text ">
+                <button
+                    class="btn btn-primary"
+                    (click)="onButtonClick()"
+                >
+                    Click Me
+                </button>
+                <p class="card-text">
+                </p>
+            </div>
+            <div class="card-footer mt-4 mb-4" >
+                <code>
+                    <div class="card m-2 ms-0 p-2">
+                        <div class="card-header">
+                            HTML
+                        </div>
+                        <code class="card-text pt-2 pb-2">(click) = "onButtonClick()"</code>
+                    </div>
+                    <div class="card m-2 ms-0 p-2">
+                        <div class="card-header">
+                            Typescript
+                        </div>
+                        <code class="card-text pt-2 pb-2">{{onButtonClick}}</code>
+                    </div>
+                    <div class="">
+                        <span class="fw-bold text-dark">Click Count: </span> <span class="fw-bold text-dark">{{clickCount}}</span>
+                    </div>
+                </code>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>
+                            When the <span class="text-highlight bg-light p-1  ">button</span> is clicked, it executes the function which is defined in the typescript.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
